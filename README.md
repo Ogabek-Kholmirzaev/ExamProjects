@@ -60,7 +60,7 @@ Output #2
 
 # 11.02.2022 - WebApi
 
-N raqamigacha bo'lgan raqamlarni yozish uchun K sonini necha marta yozish kerakligini hisoblang
+N sonigacha bo'lgan raqamlarni yozish uchun K raqami necha marta yozish kerakligini hisoblang
 
 - [x] Bu controllerga faqat ro'yxatadan otgan foydalanuvchilarni ruxsati bolsin
 - [x] Foydalanuvchilarni databazaga saqlang
@@ -70,7 +70,7 @@ N raqamigacha bo'lgan raqamlarni yozish uchun K sonini necha marta yozish kerakl
 >Input
 
 - 0 < N < int.MaxValue
-- 0 < K < int.MaxValue
+- 0 <= K <= 9
 
 
 
