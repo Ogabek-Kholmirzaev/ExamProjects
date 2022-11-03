@@ -1,0 +1,29 @@
+﻿@using Masala3.Entities
+@model Masala3.Entities.NumberDto
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    <div class="d-flex justify-content-center">
+        <form asp-controller="Home" asp-action="Index" class="mb-3 w-50" method="post">
+            <div class="form-group">
+                <label for="PhoneNumber" class="form-label">Input</label>
+                <input class="form-control" type="text" id="PhoneNumber" name="NumberFromInput" />
+                <span asp-validation-for="NumberFromInput" class="text-danger"></span>
+            </div>
+
+            <input class="form-control btn-primary mt-2" type="submit" value="Calculate" />
+        </form>
+    </div>
+</div>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>

@@ -1,0 +1,35 @@
+﻿@using Masala3.Entities
+@model Masala3.Entities.Number
+
+@{
+    ViewData["Title"] = "Show Result Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Result</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    <div class="d-flex justify-content-center">
+        <form asp-controller="Home" asp-action="Index" class="mb-3 w-50" method="post">
+            <div class="form-group">
+                <label for="PhoneNumber" class="form-label">Input</label>
+                <input class="form-control" type="text" id="PhoneNumber" name="NumberFromInput" value="@Model.NumberInInteger" readonly="readonly"/>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="Natija" class="form-label">Natija</label>
+                <input class="form-control" type="text" id="Natija" value="@Model.NumberInString" readonly="readonly"/>
+            </div>
+            
+
+            <a class="btn btn-primary mt-2" asp-action="Index">Back to Calculation</a>
+        </form>
+    </div>
+</div>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
