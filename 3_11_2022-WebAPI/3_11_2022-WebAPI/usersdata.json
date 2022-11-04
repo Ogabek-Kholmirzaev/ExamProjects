@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "user1",
+    "Role": "user",
+    "Email": "user1@email.com",
+    "Token": "73aa7f9d-b6cd-4b47-ba79-81e623c2c02a"
+  },
+  {
+    "Name": "user2",
+    "Role": "admin",
+    "Email": "user2@email.com",
+    "Token": "89096fcd-eb0d-48c7-bbb8-2bc1a5f502e7"
+  }
+]

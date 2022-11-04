@@ -9,7 +9,7 @@ namespace _3_11_2022_WebAPI.Controllers
     [ApiController]
     public class CalculationsController : ControllerBase
     {
-        //[Role("user")]
+        [Role("user")]
         [HttpGet]
         public IActionResult LCM1ToNumber(int number)
         {

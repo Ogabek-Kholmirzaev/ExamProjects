@@ -39,7 +39,7 @@ namespace _3_11_2022_WebAPI.Controllers
             return Ok(user.Token);
         }
 
-        [HttpGet]
+        [HttpGet("GetJsonFileName")]
         public IActionResult GetFileName() => Ok(_dataService.GetFileName());
     }
 }

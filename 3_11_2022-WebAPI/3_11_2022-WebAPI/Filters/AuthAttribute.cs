@@ -59,7 +59,7 @@ namespace _3_11_2022_WebAPI.Filters
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
