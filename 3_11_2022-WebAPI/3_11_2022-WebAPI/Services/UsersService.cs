@@ -7,7 +7,7 @@ namespace _3_11_2022_WebAPI.Services
     {
         private readonly DataService _dataService;
         public List<UserEntity> UsersStore;
-        
+
         public UsersService(DataService dataService)
         {
             _dataService = dataService;
