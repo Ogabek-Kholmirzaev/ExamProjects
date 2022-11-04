@@ -6,7 +6,7 @@ using Microsoft.Net.Http.Headers;
 
 namespace _3_11_2022_WebAPI.Filters
 {
-    public class AuthAttribute : IActionFilter
+    public class AuthAttribute : ActionFilterAttribute
     {
         private readonly UsersService _usersService;
         public string Roles { get; set; }
@@ -18,7 +18,7 @@ namespace _3_11_2022_WebAPI.Filters
         }
 
 
-        public void OnActionExecuting(ActionExecutingContext context)
+        public override void OnActionExecuting(ActionExecutingContext context)
         {
             if (!context.HttpContext.Request.Headers.ContainsKey(HeaderNames.Authorization))
             {
@@ -55,11 +55,6 @@ namespace _3_11_2022_WebAPI.Filters
 
             context.HttpContext.User = principal;
 
-        }
-
-        public void OnActionExecuted(ActionExecutedContext context)
-        {
-            
         }
     }
 }

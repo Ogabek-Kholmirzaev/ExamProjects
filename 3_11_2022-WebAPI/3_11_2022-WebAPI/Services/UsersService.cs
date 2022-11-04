@@ -12,9 +12,14 @@ namespace _3_11_2022_WebAPI.Services
         {
             _dataService = dataService;
 
-            var jsonText = System.IO.File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), _dataService.GetFileName()));
+            if (!File.Exists(_dataService.GetFileName()))
+                UsersStore = new List<UserEntity>();
+            else
+            {
+                var jsonText = System.IO.File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), _dataService.GetFileName()));
 
-            UsersStore = JsonConvert.DeserializeObject<List<UserEntity>>(jsonText) ?? new List<UserEntity>();
+                UsersStore = JsonConvert.DeserializeObject<List<UserEntity>>(jsonText) ?? new List<UserEntity>();
+            }
         }
     }
 }
