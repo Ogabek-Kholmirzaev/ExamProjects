@@ -22,6 +22,9 @@ namespace Middleware_8_11.Middlewares
             }
             catch (Exception e)
             {
+                using var client = new HttpClient();
+                await client.GetAsync($"https://api.telegram.org/bot5416132893:AAHC0lAheGsgeOjXOxglvn6YpsshMqWOcYo/sendmessage?chat_id=-841363105&text={e.Message}");
+
                 httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
                 await httpContext.Response.WriteAsJsonAsync(new { Error = e.Message });
             }
