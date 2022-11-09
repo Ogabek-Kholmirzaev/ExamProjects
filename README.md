@@ -107,3 +107,25 @@ N sonigacha bo'lgan raqamlarni yozish uchun K raqami necha marta yozish keraklig
 >Output #1
 
 ### 60
+
+> Description
+
+JWT token orqali userni sign up va sign in qilish jarayonlarini qiling
+
+- [x] Actions : `Signup`, `Signin`, `GetData`
+- [x] Bu controllerga faqat ro'yxatadan otgan foydalanuvchilarni ruxsati bolsin
+- [x] JWT keylarini `appsetting.json` dan oling
+- [x] *appsettings.json* faylini oqib olishda `IOption<T>` servicedan foydalaning
+- [ ] `AuthenticationHandler` yozing
+
+#
+
+
+# 8.11.2022 - WebApi
+
+> Description
+
+`ExceptionHandlerMiddleware` va `LanguageMiddleware` yozing
+
+- [x] Exceptioni telegram chatga yuborsin, [Sample](https://api.telegram.org/bot5481889693:AAHWere6v27dnKpEBYXO80ffHTsUeADx3sc/sendmessage?chat_id=124134&text=adsa)
+- [x] Language headeriga qarab data qaytarsin
