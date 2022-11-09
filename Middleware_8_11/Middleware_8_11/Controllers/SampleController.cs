@@ -16,7 +16,7 @@ namespace Middleware_8_11.Controllers
             {
                 "uz" => Ok("Salom!"),
                 "en" => Ok("Hello!"),
-                _ => throw new InvalidOperationException("We do not support this language yet!")
+                _ => BadRequest("We do not support this language yet!")
             };
         }
     }
